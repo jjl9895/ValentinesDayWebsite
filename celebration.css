@@ -1,0 +1,78 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body with a romantic gradient background */
+  body {
+    background: linear-gradient(135deg, #ff9a9e, #fecfef);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+  }
+  
+  /* Container for falling hearts */
+  #falling-hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  /* Style for each falling heart */
+  .falling-heart {
+    position: absolute;
+    color: #ff3366;
+    font-size: 24px;
+    opacity: 0.8;
+    animation: fall linear infinite;
+  }
+  
+  /* Falling animation keyframes */
+  @keyframes fall {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(110vh);
+      opacity: 0;
+    }
+  }
+  
+  /* Celebration content styling */
+  .celebration-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .celebration-content h1 {
+    font-size: 2.5rem;
+    color: #e6005c;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+  }
+  
+  .cat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cat-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  

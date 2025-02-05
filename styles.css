@@ -1,0 +1,103 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling with a vibrant Valentine’s gradient */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9a9e, #fecfef);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container for bouncing hearts in the background */
+#hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Style for each bouncing heart */
+.heart {
+  position: absolute;
+  color: #ff3366;
+  font-size: 24px;
+  opacity: 0.8;
+  animation: bounce 4s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.2);
+  }
+}
+
+/* Fixed invitation box remains centered */
+.invitation-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  text-align: center;
+  padding: 40px;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  /* Ensures that absolutely positioned children are relative to the box */
+  position: relative;
+}
+
+.invitation-box h1 {
+  color: #e6005c;
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Container for the fixed buttons inside the invitation box */
+.buttons {
+  margin-bottom: 20px;
+}
+
+/* Heart button styling */
+.heart-button {
+  background-color: #ff69b4;  /* Hot pink */
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.heart-button:hover {
+  transform: scale(1.1);
+}
+
+/* Extra Yes buttons that are added with absolute positioning */
+.random-button {
+  /* For buttons appended to the body, they are absolutely positioned relative to the viewport */
+  position: absolute;
+  z-index: 5;
+}
+
+/* Message styling */
+#message {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+}
